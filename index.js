@@ -18,12 +18,11 @@ walk("./services", function (err, results) {
     server.use(jsonServer.bodyParser);
     server.use(middleware);
 
-    //
     server.use(ang.routes);
     server.use(ang.middleware);
     server.use(ang.db);
 
-    server.listen(process.env.PORT || 3000, () => {
+    server.listen(process.env.PORT || 3004, () => {
       console.log('JSON Server is running');
     });
   }
